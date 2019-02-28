@@ -67,29 +67,29 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     
 #=====[ LEAVE GROUP OR ROOM ]==========
-    # if text == "!me":
-    #     if isinstance(event.source, SourceUser):
-    #         profile = line_bot_api.get_profile(event.source.user_id)
-    #         line_bot_api.reply_message(
-    #             event.reply_token, [
-    #                 TextSendMessage(text="Nama: " + profile.display_name),
-    #                 TextSendMessage(text="Status bio: " + profile.status_message)
-    #             ]
-    #         )
-        # elif isinstance(event.source, SourceUser):
-        #     profile = line_bot_api.get_profile(event.source.sender_id)
-        #     line_bot_api.reply_message(
-        #         event.reply_token, [
-        #             TextSendMessage(text="Nama: " + profile.display_name),
-        #             TextSendMessage(text="Status bio: " + profile.status_message)
-        #         ]
-        #     )
-        # else:
-        #     line_bot_api.reply_message(
-        #         event.reply_token,
-        #         TextSendMessage(text="Bot can"t use profile in group chat"))
+     if text == "!me":
+         if isinstance(event.source, SourceUser):
+             profile = line_bot_api.get_profile(event.source.user_id)
+             line_bot_api.reply_message(
+                 event.reply_token, [
+                     TextSendMessage(text="Nama: " + profile.display_name),
+                     TextSendMessage(text="Status bio: " + profile.status_message)
+                 ]
+             )
+         elif isinstance(event.source, SourceUser):
+             profile = line_bot_api.get_profile(event.source.sender_id)
+             line_bot_api.reply_message(
+                 event.reply_token, [
+                     TextSendMessage(text="Nama: " + profile.display_name),
+                     TextSendMessage(text="Status bio: " + profile.status_message)
+                 ]
+             )
+         else:
+             line_bot_api.reply_message(
+                 event.reply_token,
+                 TextSendMessage(text="Bot can"t use profile in group chat"))
 
-    if text == "!segame-bye":
+    if text == "!coss-bye":
         if isinstance(event.source, SourceGroup):
             line_bot_api.reply_message(
                 event.reply_token, TextSendMessage(text="Bye semuanya :D"))
@@ -103,20 +103,20 @@ def handle_message(event):
                 event.reply_token,
                 TextSendMessage(text="Command ini tidak bisa dipakai dalam private chat :("))
 #=====[ TES MESSAGE ]=============
-    if text == "redtube on":
-        angka = random.randint(1, 200)
-        r = requests.get("https://api.boteater.vip/redtube?page={}".format(angka))
-        data=r.text
-        data=json.loads(data)
-        for anu in data["result"]:
-            line_bot_api.reply_message(event.reply_token,VideoSendMessage(original_content_url=anu["dl"], preview_image_url=anu["img"]))
-    elif text == "xvideos on":
-        angka = random.randint(1, 200)
-        r = requests.get("https://api.boteater.vip/xvideos?page={}".format(angka))
-        data=r.text
-        data=json.loads(data)
-        for anu in data["result"]:
-            line_bot_api.reply_message(event.reply_token,VideoSendMessage(original_content_url=anu["dl"], preview_image_url=anu["img"]))
+   # if text == "redtube on":
+    #    angka = random.randint(1, 200)
+    #    r = requests.get("https://api.boteater.vip/redtube?page={}".format(angka))
+     #   data=r.text
+    #    data=json.loads(data)
+      #  for anu in data["result"]:
+    #        line_bot_api.reply_message(event.reply_token,VideoSendMessage(original_content_url=anu["dl"], preview_image_url=anu["img"]))
+  #  elif text == "xvideos on":
+    #    angka = random.randint(1, 200)
+      #  r = requests.get("https://api.boteater.vip/xvideos?page={}".format(angka))
+      #  data=r.text
+    #    data=json.loads(data)
+     #   for anu in data["result"]:
+       #     line_bot_api.reply_message(event.reply_token,VideoSendMessage(original_content_url=anu["dl"], preview_image_url=anu["img"]))
 #=====[ TES MESSAGE ]=============
     elif text == "confirm":
         confirm_template = ConfirmTemplate(text="Bot nya bagus?", actions=[
@@ -137,36 +137,36 @@ def handle_message(event):
 
     # elif "!contoh idline"
 
-    # elif "/apakah " in event.message.text:
-    #     quo = ("Iya","Tidak","Gak tau","Bisa jadi","Mungkin iya","Mungkin tidak")
-    #     jwb = random.choice(quo)
-    #     text_message = TextSendMessage(text=jwb)
-    #     line_bot_api.reply_message(event.reply_token, text_message)
-    #     return 0
+     elif "/apakah " in event.message.text:
+         quo = ("Iya","Tidak","Gak tau","Bisa jadi","Mungkin iya","Mungkin tidak")
+         jwb = random.choice(quo)
+         text_message = TextSendMessage(text=jwb)
+         line_bot_api.reply_message(event.reply_token, text_message)
+         return 0
 
     # elif (text == "999+") or (text == "999++"):
     #     message = TextSendMessage(text="ckk by")
     #     line_bot_api.reply_message(event.reply_token, message)
 
-    # elif (text == "Bot") or (text == "bot"):
-    #     message = TextSendMessage(text="Siapa bot? ke bot an lu")
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "Bot") or (text == "bot"):
+         message = TextSendMessage(text="Siapa bot? ke bot an lu")
+         line_bot_api.reply_message(event.reply_token, message)
 
-    # elif (text == "Tes") or (text == "tes") or (text == "Test") or (text == "test"):
-    #     message = TextSendMessage(text="suk beybeh")
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "Tes") or (text == "tes") or (text == "Test") or (text == "test"):
+         message = TextSendMessage(text="suk beybeh")
+         line_bot_api.reply_message(event.reply_token, message)
 
-    # elif (text == "@") or (text == "Yud") or (text == "yud") or (text == "yudha"):
-    #     message = TextSendMessage(text="Apa manggil-manggil cogan")
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "@") or (text == "Need") or (text == "need") or (text == "Need MoodBooster"):
+         message = TextSendMessage(text="Apa manggil-manggil cogan")
+         line_bot_api.reply_message(event.reply_token, message)
 
-    # elif text == ".":
-    #     message = TextSendMessage(text="Titik titik amat so high lu")
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif text == ".":
+         message = TextSendMessage(text="Titik titik amat so high lu")
+         line_bot_api.reply_message(event.reply_token, message)
 
-    # elif (text == "Bah") or (text == "bah"):
-    #     message = TextSendMessage(text="Beh")
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "Bah") or (text == "bah"):
+         message = TextSendMessage(text="Beh")
+         line_bot_api.reply_message(event.reply_token, message)
 
 #=====[ TEMPLATE MESSAGE ]=============
     # elif text == "/tools":
@@ -199,8 +199,8 @@ def handle_message(event):
             template = CarouselTemplate(
                 columns = [
                     CarouselColumn(
-                        thumbnail_image_url = "https://i.ibb.co/fpgLpGb/Se-Game-Discord-Logo.png",
-                        title = "SeGame Menu",
+                        thumbnail_image_url = "https://i.ibb.co/c8WzYwt/1551283598926.jpg",
+                        title = "COSS Music Menu",
                         text = "Silahkan pilih\nTekan tombol dibawah ini",
                         actions = [
                             MessageTemplateAction(
@@ -210,13 +210,13 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "https://i.ibb.co/fpgLpGb/Se-Game-Discord-Logo.png",
-                        title = "SeGame Menu 2",
+                        thumbnail_image_url = "https://i.ibb.co/c8WzYwt/1551283598926.jpg",
+                        title = "COSS Menu 2",
                         text = "Silahkan pilih, tekan tombol dibawah ini",
                         actions = [
                             MessageTemplateAction(
                                 label = "Keluarkan bot",
-                                text = "!segame-Bye"
+                                text = "!COSS-Bye"
                             )
                         ]
                     )
@@ -234,33 +234,33 @@ def handle_message(event):
                 text = "silahkan pilih, tekan tombol dibawah ini",
                 actions = [
                     MessageTemplateAction(
-                        label = "About SeGame",
-                        text = "!about segame"
+                        label = "comming soon",
+                        text = "!commingsoon"
                     ),
                     MessageTemplateAction(
                         label = "Admin List",
                         text = "!adminlist"
                     ),
                     MessageTemplateAction(
-                        label = "Our Team",
-                        text = "!our team"
+                        label = "About COSS",
+                        text = "!about coss "
                     ) 
                 ]
             )
         )
         line_bot_api.reply_message(event.reply_token, buttons_template)
 
-    elif "!about segame" in event.message.text:
+    elif "!commingsoon" in event.message.text:
         token = event.reply_token
         text_message = TextSendMessage(text = "Comming Soon...")
         line_bot_api.reply_message(token, text_message)
 #=== [SEGAME TEAM] ===
-    elif (text == "!our team") or (text == "Our team") or (text == "our team") or (text == "Segame team") or (text == "SeGame team") or (text == "segame team"):
+    elif (text == "!about coss") or (text == "about coss") or (text == "About coss") or (text == "About Coss") or (text == "About COSS") or (text == "!About Coss"):
         token = event.reply_token
         buttons_template = TemplateSendMessage(
-            alt_text = "OUR TEAM",
+            alt_text = "ABOUT COSS",
             template = ButtonsTemplate(
-                title = "SeGame Team",
+                title = "ABOUT COSS",
                 text = "Silahkam pilih game dibawah ini",
                 actions = [
                     MessageTemplateAction(
@@ -273,123 +273,123 @@ def handle_message(event):
         line_bot_api.reply_message(token, buttons_template)
 
 
-    if event.message.text == "!mlbb team":
-        message_2 = TemplateSendMessage(
-            alt_text = "SeGame MLBB Team",
-            template = ButtonsTemplate(
-                title = "   Mobile Legend Team",
-                text = "Klik dibawah ini\nUntuk melihat informasi team kami",
-                thumbnail_image_url = "https://cdn.pbrd.co/images/HYh1DgJ.png",
-                actions = [
-                    MessageTemplateAction(
-                        label = "Next Generation",
-                        text = "!next generation team"
-                    ),
-                    MessageTemplateAction(
-                        label = "The Raven",
-                        text = "!the raven team"
-                    ),
-                    MessageTemplateAction(
-                        label = "Hunger Strike",
-                        text = "!hunger strike team"
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, message_2)
+  #  if event.message.text == "!mlbb team":
+     #   message_2 = TemplateSendMessage(
+      #      alt_text = "SeGame MLBB Team",
+      #      template = ButtonsTemplate(
+      #          title = "   Mobile Legend Team",
+         #       text = "Klik dibawah ini\nUntuk melihat informasi team kami",
+         #       thumbnail_image_url = "https://cdn.pbrd.co/images/HYh1DgJ.png",
+          #      actions = [
+          #          MessageTemplateAction(
+          #              label = "Next Generation",
+          #              text = "!next generation team"
+            #        ),
+           #         MessageTemplateAction(
+           #             label = "The Raven",
+            #            text = "!the raven team"
+             #       ),
+             #       MessageTemplateAction(
+             #           label = "Hunger Strike",
+            #            text = "!hunger strike team"
+             #       )
+          #      ]
+        #    )
+      #  )
+    #    line_bot_api.reply_message(event.reply_token, message_2)
 
-    elif (text == "!the raven team") or (text == "the raven team") or (text == "The raven team"):
-        message = TemplateSendMessage(
-            thumbnail_image_url = "http://www.segameesports.com/assets/img/games/ML-Logo.png",
-            alt_text = "THE RAVEN TEAM",
-            template = CarouselTemplate(
-                columns = [
-                    CarouselColumn(
-                        thumbnail_image_url = "https://cdn.pbrd.co/images/HYgronQ.png",
-                        title = "zato",
-                        text = "The Raven Leader\nKlik dibawah ini untuk melihat profile",
-                        actions = [
-                            URITemplateAction(
-                                label = "CEK PROFILE",
-                                uri = "https://cdn.pbrd.co/images/HYgronQ.png"
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "https://cdn.pbrd.co/images/HYgsdV0.png",
-                        title = "Umbu Jahat",
-                        text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
-                        actions = [
-                            URITemplateAction(
-                                label = "CEK PROFILE",
-                                uri = "https://cdn.pbrd.co/images/HYgsdV0.png"
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "https://cdn.pbrd.co/images/HYgsyPK.png",
-                        title = "RDecimo",
-                        text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
-                        actions = [
-                            URITemplateAction(
-                                label = "CEK PROFILE",
-                                uri = "https://cdn.pbrd.co/images/HYgsyPK.png"
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "https://cdn.pbrd.co/images/HYgqEFk.jpg",
-                        title = "Mons°Wijay",
-                        text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
-                        actions = [
-                            URITemplateAction(
-                                label = "CEK PROFILE",
-                                uri = "https://cdn.pbrd.co/images/HYgqEFk.jpg"
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "https://cdn.pbrd.co/images/HYgtnPq.png",
-                        title = "RAMA #46",
-                        text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
-                        actions = [
-                            URITemplateAction(
-                                label = "CEK PROFILE",
-                                uri = "https://cdn.pbrd.co/images/HYgtnPq.png"
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "https://cdn.pbrd.co/images/HYgumHa.png",
-                        title = "mau ga jadi pacarku?",
-                        text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
-                        actions = [
-                            URITemplateAction(
-                                label = "CEK PROFILE",
-                                uri = "https://cdn.pbrd.co/images/HYgumHa.png"
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "https://cdn.pbrd.co/images/HYgumHa.png",
-                        title = "Sibor",
-                        text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
-                        actions = [
-                            URITemplateAction(
-                                label = "CEK PROFILE",
-                                uri = "https://cdn.pbrd.co/images/HYgumHa.png"
-                            )
-                        ]
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, message)
+  #  elif (text == "!the raven team") or (text == "the raven team") or (text == "The raven team"):
+      #  message = TemplateSendMessage(
+         #   thumbnail_image_url = "http://www.segameesports.com/assets/img/games/ML-Logo.png",
+          #  alt_text = "THE RAVEN TEAM",
+          #  template = CarouselTemplate(
+           #     columns = [
+                 #   CarouselColumn(
+                     #   thumbnail_image_url = "https://cdn.pbrd.co/images/HYgronQ.png",
+                     #   title = "zato",
+                     #   text = "The Raven Leader\nKlik dibawah ini untuk melihat profile",
+                      #  actions = [
+                          #  URITemplateAction(
+                               # label = "CEK PROFILE",
+                               # uri = "https://cdn.pbrd.co/images/HYgronQ.png"
+                          #  )
+                        #]
+                   # ),
+                  #  CarouselColumn(
+                      #  thumbnail_image_url = "https://cdn.pbrd.co/images/HYgsdV0.png",
+                       # title = "Umbu Jahat",
+                       # text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
+                      #  actions = [
+                         #   URITemplateAction(
+                             #   label = "CEK PROFILE",
+                            #    uri = "https://cdn.pbrd.co/images/HYgsdV0.png"
+                           # )
+                       # ]
+                   # ),
+                   # CarouselColumn(
+                       # thumbnail_image_url = "https://cdn.pbrd.co/images/HYgsyPK.png",
+                       # title = "RDecimo",
+                      #  text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
+                       # actions = [
+                           # URITemplateAction(
+                              #  label = "CEK PROFILE",
+                               # uri = "https://cdn.pbrd.co/images/HYgsyPK.png"
+                         #   )
+                       # ]
+                   # ),
+                  #  CarouselColumn(
+                      #  thumbnail_image_url = "https://cdn.pbrd.co/images/HYgqEFk.jpg",
+                       # title = "Mons°Wijay",
+                     #   text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
+                      #  actions = [
+                          #  URITemplateAction(
+                              #  label = "CEK PROFILE",
+                              #  uri = "https://cdn.pbrd.co/images/HYgqEFk.jpg"
+                          #  )
+                       # ]
+                  #  ),
+                  #  CarouselColumn(
+                     #   thumbnail_image_url = "https://cdn.pbrd.co/images/HYgtnPq.png",
+                       # title = "RAMA #46",
+                       # text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
+                      #  actions = [
+                           # URITemplateAction(
+                               # label = "CEK PROFILE",
+                             #   uri = "https://cdn.pbrd.co/images/HYgtnPq.png"
+                          #  )
+                        #]
+                   # ),
+                 #   CarouselColumn(
+                       # thumbnail_image_url = "https://cdn.pbrd.co/images/HYgumHa.png",
+                      #  title = "mau ga jadi pacarku?",
+                       # text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
+                      #  actions = [
+                           # URITemplateAction(
+                               # label = "CEK PROFILE",
+                               # uri = "https://cdn.pbrd.co/images/HYgumHa.png"
+                          #  )
+                      #  ]
+                 #   ),
+                 #   CarouselColumn(
+                       # thumbnail_image_url = "https://cdn.pbrd.co/images/HYgumHa.png",
+                      #  title = "Sibor",
+                     #   text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
+                      #  actions = [
+                           # URITemplateAction(
+                             #   label = "CEK PROFILE",
+                             #   uri = "https://cdn.pbrd.co/images/HYgumHa.png"
+                           # )
+                       # ]
+                  #  )
+               # ]
+           # )
+       # )
+      #  line_bot_api.reply_message(event.reply_token, message)
 
-    elif (text == "!next generation team") or (text == "!the raven team") or (text == "!hunger strike team"):
-        token = event.reply_token
-        text_message = TextSendMessage(text = "Comming Soon")
-        line_bot_api.reply_message(token, text_message)
+   # elif (text == "!next generation team") or (text == "!the raven team") or (text == "!hunger strike team"):
+    #    token = event.reply_token
+      #  text_message = TextSendMessage(text = "Comming Soon")
+      #  line_bot_api.reply_message(token, text_message)
 #=====[ CAROUSEL MESSAGE ]==========
     elif text == "/musik":
         buttons_template = TemplateSendMessage(
@@ -471,27 +471,27 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 
 #============= [GABUNG DISCORD BUTTON TEMPLATE] =============
-    if event.message.text == "!gabung discord":
-        buttons_template = TemplateSendMessage(
-            alt_text="SeGame Official",
-            template=ButtonsTemplate(
-                title="SeGame Discord",
-                text="segame dulu yuk bareng kita",
-                thumbnail_image_url="https://i.ibb.co/Yfrjvqs/Se-Game-Discord-Logo.png",
-                actions=[
-                    URITemplateAction(
-                        label="Invite link 1",
-                        uri="https://discord.me/SeGame_Esports"
-                    ),
-                    URITemplateAction(
-                        label="Invite link 2",
-                        uri="https://discord.gg/vMcMe8f"
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, buttons_template)
-        return 0
+  #  if event.message.text == "!gabung discord":
+      #  buttons_template = TemplateSendMessage(
+         #   alt_text="SeGame Official",
+          #  template=ButtonsTemplate(
+              #  title="SeGame Discord",
+              #  text="segame dulu yuk bareng kita",
+              #  thumbnail_image_url="https://i.ibb.co/Yfrjvqs/Se-Game-Discord-Logo.png",
+             #   actions=[
+                  #  URITemplateAction(
+                       # label="Invite link 1",
+                      #  uri="https://discord.me/SeGame_Esports"
+                  #  ),
+                  #  URITemplateAction(
+                      #  label="Invite link 2",
+                      #  uri="https://discord.gg/vMcMe8f"
+                  #  )
+              #  ]
+          #  )
+      #  )
+      #  line_bot_api.reply_message(event.reply_token, buttons_template)
+      #  return 0
 
     if event.message.text == "!me":
         profile = line_bot_api.get_profile(event.source.user_id)
@@ -585,7 +585,7 @@ def handle_message(event):
 #=====[ FLEX MESSAGE ]==========
     # elif text == "yud test":
     #     message = ImagemapSendMessage(
-    #         base_url="https://i.imgur.com/g8P1V9Q.jpg",
+    #         base_url="m/g8P1V9Q.jpg",
     #         alt_text="manyimak corom",
     #         base_size=BaseSize(height=1040, width=1040),
     #         actions=[
@@ -606,32 +606,32 @@ def handle_message(event):
     #     line_bot_api.reply_message(event.reply_token, message)
 
 #=====[ Sticker MESSAGE ]==========
-    # elif (text == "oksip") or (text == "Oksip"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002735/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "makasih") or (text == "Makasih"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/153453/IOS/sticker.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "oksip") or (text == "Oksip"):
+         message = TemplateSendMessage(
+             alt_text="NeedBot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002735/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "makasih") or (text == "Makasih"):
+         message = TemplateSendMessage(
+             alt_text="NeedBot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/153453/IOS/sticker.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
     # elif (text == "nyimak") or (text == "Nyimak"):
     #     message = TemplateSendMessage(
     #         alt_text="Yudha public bot",
