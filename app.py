@@ -155,26 +155,6 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
 
 #=====[ TEMPLATE MESSAGE ]=============
-     elif text == "/tools":
-         buttons_template = TemplateSendMessage(
-             alt_text="Tools message",
-             template=ButtonsTemplate(
-                 title="[ TOOLS MESSAGE ]",
-                 text= "Tap the Button",
-                 actions=[
-                     MessageTemplateAction(
-                         label="Cek ID Line",
-                         text="!contoh idline"
-                     ),
-                     MessageTemplateAction(
-                         label="Your profile",
-                         text="/me"
-                     )
-                 ]
-             )
-         )
-        
-         line_bot_api.reply_message(event.reply_token, buttons_template)
     elif (text == "!help") or (text == "help") or (text == "Help"):
         message = TemplateSendMessage(
             alt_text ="Help message",
