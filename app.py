@@ -430,7 +430,7 @@ def handle_message(event):
 #=====[ FLEX MESSAGE ]==========
      elif text == "need test":
          message = ImagemapSendMessage(
-             base_url="m/g8P1V9Q.jpg",
+             base_url="https://i.ibb.co/c8WzYwt/1551283598926.jpg",
              alt_text="manyimak corom",
              base_size=BaseSize(height=1040, width=1040),
              actions=[
@@ -479,7 +479,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "nyimak") or (text == "Nyimak"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -492,7 +492,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "ga") or (text == "gak") or (text == "gamau") or (text == "Gamau") or (text == "Ga") or (text == "Gak"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -505,7 +505,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "good night") or (text == "Good night") or (text == "selamat malam") or (text == "Selamat malam"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -518,7 +518,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "hai") or (text == "Hai") or (text == "halo") or (text == "Halo"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -531,7 +531,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "sabar") or (text == "Sabar"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -544,7 +544,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "wkwk") or (text == "Wkwk"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -557,7 +557,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "hehe") or (text == "Hehe"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -570,7 +570,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "siap") or (text == "Siap"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -583,7 +583,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif text == "?":
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -596,7 +596,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "please") or (text == "Please") or (text == "tolong") or (text == "Tolong"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -609,7 +609,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "ok") or (text == "oke") or (text == "Ok") or (text == "Oke"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -622,7 +622,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "hahaha") or (text == "Hahaha") or (text == "Haha")or (text == "haha"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
@@ -635,7 +635,7 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
      elif (text == "sebel") or (text == "Sebel"):
          message = TemplateSendMessage(
-             alt_text="Yudha public bot",
+             alt_text="NeedBot",
              template=ImageCarouselTemplate(
                  columns=[
                      ImageCarouselColumn(
