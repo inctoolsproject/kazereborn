@@ -102,17 +102,6 @@ def handle_message(event):
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text="Command ini tidak bisa dipakai dalam private chat :("))
-
-#=====[ TES MESSAGE ]=============
-    elif text == "confirm":
-        confirm_template = ConfirmTemplate(text="Bot nya bagus?", actions=[
-            MessageTemplateAction(label="Yes", text="Yes!"),
-            MessageTemplateAction(label="No", text="No!"),
-        ])
-        template_message = TemplateSendMessage(
-            alt_text="Confirm alt text", template=confirm_template)
-        line_bot_api.reply_message(event.reply_token, template_message)
-
 #=====[ SEARCH ID LINE ]=============
     elif "!idline: " in event.message.text:
         skss = event.message.text.replace("/idline: ", "")
