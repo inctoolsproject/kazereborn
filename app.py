@@ -102,21 +102,7 @@ def handle_message(event):
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text="Command ini tidak bisa dipakai dalam private chat :("))
-#=====[ TES MESSAGE ]=============
-   # if text == "redtube on":
-    #    angka = random.randint(1, 200)
-    #    r = requests.get("https://api.boteater.vip/redtube?page={}".format(angka))
-     #   data=r.text
-    #    data=json.loads(data)
-      #  for anu in data["result"]:
-    #        line_bot_api.reply_message(event.reply_token,VideoSendMessage(original_content_url=anu["dl"], preview_image_url=anu["img"]))
-  #  elif text == "xvideos on":
-    #    angka = random.randint(1, 200)
-      #  r = requests.get("https://api.boteater.vip/xvideos?page={}".format(angka))
-      #  data=r.text
-    #    data=json.loads(data)
-     #   for anu in data["result"]:
-       #     line_bot_api.reply_message(event.reply_token,VideoSendMessage(original_content_url=anu["dl"], preview_image_url=anu["img"]))
+
 #=====[ TES MESSAGE ]=============
     elif text == "confirm":
         confirm_template = ConfirmTemplate(text="Bot nya bagus?", actions=[
@@ -169,30 +155,30 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, message)
 
 #=====[ TEMPLATE MESSAGE ]=============
-    # elif text == "/tools":
-    #     buttons_template = TemplateSendMessage(
-    #         alt_text="Tools message",
-    #         template=ButtonsTemplate(
-    #             title="[ TOOLS MESSAGE ]",
-    #             text= "Tap the Button",
-    #             actions=[
-    #                 MessageTemplateAction(
-    #                     label="App Cloner",
-    #                     text="/app clone"
-    #                 ),
-    #                 MessageTemplateAction(
-    #                     label="Cek ID Line",
-    #                     text="!contoh idline"
-    #                 ),
-    #                 MessageTemplateAction(
-    #                     label="Your profile",
-    #                     text="/me"
-    #                 )
-    #             ]
-    #         )
-    #     )
+     elif text == "/tools":
+         buttons_template = TemplateSendMessage(
+             alt_text="Tools message",
+             template=ButtonsTemplate(
+                 title="[ TOOLS MESSAGE ]",
+                 text= "Tap the Button",
+                 actions=[
+                     MessageTemplateAction(
+                         label="App Cloner",
+                         text="/app clone"
+                     ),
+                     MessageTemplateAction(
+                         label="Cek ID Line",
+                         text="!contoh idline"
+                     ),
+                     MessageTemplateAction(
+                         label="Your profile",
+                         text="/me"
+                     )
+                 ]
+             )
+         )
         
-    #     line_bot_api.reply_message(event.reply_token, buttons_template)
+         line_bot_api.reply_message(event.reply_token, buttons_template)
     elif (text == "!help") or (text == "help") or (text == "Help"):
         message = TemplateSendMessage(
             alt_text ="Help message",
