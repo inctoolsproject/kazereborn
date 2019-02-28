@@ -144,9 +144,9 @@ def handle_message(event):
          line_bot_api.reply_message(event.reply_token, text_message)
          return 0
 
-    # elif (text == "999+") or (text == "999++"):
-    #     message = TextSendMessage(text="ckk by")
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "999+") or (text == "999++"):
+         message = TextSendMessage(text="ckk by")
+         line_bot_api.reply_message(event.reply_token, message)
 
      elif (text == "Bot") or (text == "bot"):
          message = TextSendMessage(text="Siapa bot? ke bot an lu")
@@ -418,7 +418,7 @@ def handle_message(event):
 #=====[ CAROUSEL MESSAGE ]==========
     elif (text == "!adminlist") or (text == "Adminlist") or (text == "adminlist"):
         message = TemplateSendMessage(
-            alt_text="SeGame admin list",
+            alt_text="Management COSS",
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
@@ -469,29 +469,6 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
-
-#============= [GABUNG DISCORD BUTTON TEMPLATE] =============
-  #  if event.message.text == "!gabung discord":
-      #  buttons_template = TemplateSendMessage(
-         #   alt_text="SeGame Official",
-          #  template=ButtonsTemplate(
-              #  title="SeGame Discord",
-              #  text="segame dulu yuk bareng kita",
-              #  thumbnail_image_url="https://i.ibb.co/Yfrjvqs/Se-Game-Discord-Logo.png",
-             #   actions=[
-                  #  URITemplateAction(
-                       # label="Invite link 1",
-                      #  uri="https://discord.me/SeGame_Esports"
-                  #  ),
-                  #  URITemplateAction(
-                      #  label="Invite link 2",
-                      #  uri="https://discord.gg/vMcMe8f"
-                  #  )
-              #  ]
-          #  )
-      #  )
-      #  line_bot_api.reply_message(event.reply_token, buttons_template)
-      #  return 0
 
     if event.message.text == "!me":
         profile = line_bot_api.get_profile(event.source.user_id)
@@ -632,175 +609,175 @@ def handle_message(event):
              )
          )
          line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "nyimak") or (text == "Nyimak"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/13162615/IOS/sticker.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "ga") or (text == "gak") or (text == "gamau") or (text == "Gamau") or (text == "Ga") or (text == "Gak"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/8683557/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "good night") or (text == "Good night") or (text == "selamat malam") or (text == "Selamat malam"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/8683546/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "hai") or (text == "Hai") or (text == "halo") or (text == "Halo"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002738/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "sabar") or (text == "Sabar"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/22499899/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "wkwk") or (text == "Wkwk"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/27695296/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "hehe") or (text == "Hehe"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002763/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "siap") or (text == "Siap"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/51626520/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif text == "?":
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/34751035/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "please") or (text == "Please") or (text == "tolong") or (text == "Tolong"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/51626499/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "ok") or (text == "oke") or (text == "Ok") or (text == "Oke"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/51626500/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "hahaha") or (text == "Hahaha") or (text == "Haha")or (text == "haha"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/40381622/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "sebel") or (text == "Sebel"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52114135/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "nyimak") or (text == "Nyimak"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/13162615/IOS/sticker.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "ga") or (text == "gak") or (text == "gamau") or (text == "Gamau") or (text == "Ga") or (text == "Gak"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/8683557/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "good night") or (text == "Good night") or (text == "selamat malam") or (text == "Selamat malam"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/8683546/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "hai") or (text == "Hai") or (text == "halo") or (text == "Halo"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002738/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "sabar") or (text == "Sabar"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/22499899/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "wkwk") or (text == "Wkwk"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/27695296/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "hehe") or (text == "Hehe"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002763/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "siap") or (text == "Siap"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/51626520/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif text == "?":
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/34751035/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "please") or (text == "Please") or (text == "tolong") or (text == "Tolong"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/51626499/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "ok") or (text == "oke") or (text == "Ok") or (text == "Oke"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/51626500/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "hahaha") or (text == "Hahaha") or (text == "Haha")or (text == "haha"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/40381622/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "sebel") or (text == "Sebel"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52114135/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
 #=======================================================================================================================
 import os
 if __name__ == "__main__":
