@@ -123,16 +123,12 @@ def handle_message(event):
 
     # elif "!contoh idline"
 
-     elif "/apakah " in event.message.text:
-         quo = ("Iya","Tidak","Gak tau","Bisa jadi","Mungkin iya","Mungkin tidak")
-         jwb = random.choice(quo)
-         text_message = TextSendMessage(text=jwb)
-         line_bot_api.reply_message(event.reply_token, text_message)
-         return 0
-
-     elif (text == "999+") or (text == "999++"):
-         message = TextSendMessage(text="ckk by")
-         line_bot_api.reply_message(event.reply_token, message)
+     #elif "/apakah " in event.message.text:
+        # quo = ("Iya","Tidak","Gak tau","Bisa jadi","Mungkin iya","Mungkin tidak")
+        # jwb = random.choice(quo)
+         #text_message = TextSendMessage(text=jwb)
+        # line_bot_api.reply_message(event.reply_token, text_message)
+        # return 0
 
      elif (text == "Bot") or (text == "bot"):
          message = TextSendMessage(text="Siapa bot? ke bot an lu")
