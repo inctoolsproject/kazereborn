@@ -163,10 +163,6 @@ def handle_message(event):
                  text= "Tap the Button",
                  actions=[
                      MessageTemplateAction(
-                         label="App Cloner",
-                         text="/app clone"
-                     ),
-                     MessageTemplateAction(
                          label="Cek ID Line",
                          text="!contoh idline"
                      ),
